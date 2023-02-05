@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="img/calculadora-icon.svg"
+      type="image/x-icon"
+    />
+    <title>Calculadora</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="modo-oscuro">
+          <p>Modo Oscuro:</p>
+          <label class="switch">
+            <input type="checkbox" id="switch-dark" onchange="test()" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="temas">
+          <p>Estilo:</p>
+          <input type="radio" name="grupo-temas" id="tema-1" checked />
+          <input type="radio" name="grupo-temas" id="tema-2" />
+          <input type="radio" name="grupo-temas" id="tema-3" />
+        </div>
+        <div class="tipo-calculadora">
+          <p>Tipo:</p>
+          <select>
+            <option value="Normal">Normal</option>
+          </select>
+        </div>
+      </header>
+
+      <main class="tema-1">
+        <div class="botones-superiores">
+          <button class="boton-historial">Historial</button>
+          <input type="checkbox" id="switch-dark-calculator" />
+        </div>
+
+        <div class="container-pantallas">
+          <div class="pantalla-operaciones">
+            <p class="texto-operaciones">3x5</p>
+          </div>
+          <div class="pantalla-resultado">
+            <p class="texto-resultado">15</p>
+          </div>
+        </div>
+
+        <div class="container-botones">
+          <table>
+            <tr>
+              <td>
+                <button class="panel-boton boton-operador" id="AC">AC</button>
+              </td>
+              <td>
+                <button class="panel-boton boton-operador" id="borrar">
+                  <i class="fa-solid fa-delete-left"></i>
+                </button>
+              </td>
+              <td>
+                <button class="panel-boton boton-operador" id="%">%</button>
+              </td>
+              <td>
+                <button class="panel-boton boton-operador" id="CE">/</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="panel-boton boton-numeral" id="7">7</button>
+              </td>
+              <td>
+                <button class="panel-boton boton-numeral" id="8">8</button>
+              </td>
+              <td>
+                <button class="panel-boton boton-numeral" id="9">9</button>
+              </td>
+              <td>
+                <button class="panel-boton boton-operador" id="x">x</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="panel-boton boton-numeral" id="4">4</button>
+              </td>
+              <td>
+                <button class="panel-boton boton-numeral" id="5">5</button>
+              </td>
+              <td>
+                <button class="panel-boton boton-numeral" id="6">6</button>
+              </td>
+              <td>
+                <button class="panel-boton boton-operador" id="-">-</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="panel-boton boton-numeral" id="1">1</button>
+              </td>
+              <td>
+                <button class="panel-boton boton-numeral" id="2">2</button>
+              </td>
+              <td>
+                <button class="panel-boton boton-numeral" id="3">3</button>
+              </td>
+              <td>
+                <button class="panel-boton boton-operador" id="+">+</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="panel-boton boton-expandir" id="expandir">
+                  <i class="fa-solid fa-expand"></i>
+                </button>
+              </td>
+              <td>
+                <button class="panel-boton boton-numeral" id="0">0</button>
+              </td>
+              <td>
+                <button class="panel-boton boton-decimal" id=".">.</button>
+              </td>
+              <td>
+                <button class="panel-boton boton-igualdad" id="igualdad">
+                  =
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2023 - Made by Kenny</p>
+        <ul class="icons">
+          <li class="icon">
+            <a rel="noopener" href="https://github.com/KSAplay" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li class="icon">
+            <a
+              rel="noopener"
+              href="https://www.linkedin.com/in/kenny-saavedra-altuna/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/7b9f8c27b2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="calculator.js"></script>
+  </body>
+</html>
